@@ -1,1 +1,29 @@
 /* You can add global styles to this file, and also import other style files */
+@import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
+@import '~normalize.css';
+@import url("https://fonts.googleapis.com/icon?family=Material+Icons");
+
+html, body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+.center {
+  text-align: center;
+  margin: 0 auto;
+}
+
+.mat-drawer-content {
+  width: 100%;
+  background-color: #fff;
+}
+
