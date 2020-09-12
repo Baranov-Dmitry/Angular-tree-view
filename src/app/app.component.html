@@ -3,8 +3,8 @@
     <div class="header__burger" (click)="drawer.toggle()"></div>
     <div class="header__login d-flex">
       <div class="login__name">Hello {{ userName }}</div>
-      <button class="login__profile" mat-raised-button>Profile</button>
-      <button class="login__logout" mat-raised-button>Log Out</button>
+      <a class="login__profile" mat-raised-button disabled>Profile</a>
+      <a class="login__logout" (click)="logout($event)" mat-raised-button>Log Out</a>
     </div>
   </div>
 

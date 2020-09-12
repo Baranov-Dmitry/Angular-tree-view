@@ -17,7 +17,9 @@ import {MatTreeModule} from '@angular/material/tree';
 import {MatIconModule} from '@angular/material/icon';
 
 import {HttpClientModule} from '@angular/common/http';
-import { DisplayExistingTreeComponent } from './display-existing-tree/display-existing-tree.component';
+import {DisplayExistingTreeComponent} from './display-existing-tree/display-existing-tree.component';
+import {LoginComponent} from './login/login.component';
+import {AuthGuard} from './services/auth.guard';
 
 @NgModule({
   declarations: [
@@ -26,6 +28,7 @@ import { DisplayExistingTreeComponent } from './display-existing-tree/display-ex
     TreeViewerComponent,
     PageNotFoundComponent,
     DisplayExistingTreeComponent,
+    LoginComponent,
   ],
   imports: [
     BrowserModule,
@@ -40,7 +43,7 @@ import { DisplayExistingTreeComponent } from './display-existing-tree/display-ex
     HttpClientModule,
     MatIconModule
   ],
-  providers: [],
+  providers: [AuthGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule {

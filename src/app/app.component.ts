@@ -1,16 +1,24 @@
 import {Component, OnInit} from '@angular/core';
+import {Router} from '@angular/router';
+import {AuthService} from './services/auth.services';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent implements OnInit {
+export class AppComponent {
   title = 'Tree-View';
-  userName = 'Dmitry';
+  userName = 'username';
 
-  ngOnInit(): void {
-    console.log('hi');
+  constructor(
+    private router: Router,
+    public auth: AuthService) {
   }
 
+  logout($event: MouseEvent): void {
+    $event.preventDefault();
+    this.auth.logout();
+    this.router.navigate(['']);
+  }
 }

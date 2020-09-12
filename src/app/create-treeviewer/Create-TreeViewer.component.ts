@@ -57,4 +57,10 @@ export class CreateTreeViewerComponent implements OnInit {
     storageSetItem(STORE_TREE_VIEW, this.treeView.getNodes());
     this.form.reset();
   }
+
+  onBlur(event): void {
+    if (event.target.value > 0) {
+      this.form.get('max').setValidators([Validators.min(event.target.value)]);
+    }
+  }
 }

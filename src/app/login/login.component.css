@@ -1,0 +1,14 @@
+form {
+  max-width: 450px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.submit {
+  width: 130px;
+  height: 37px;
+}
+
+.mat-form-field {
+  width: 100%;
+}
